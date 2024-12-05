@@ -24,7 +24,7 @@ Higress 和 Nacos 其实是师出同门——阿里中间件团队。在 Higress
 这里默认已经安装好 Higress，搭配 Nacos 使用的具体方式如下：
 ### 配置服务来源
 ```yaml
-apiVersion: networking.higress.io/v1
+apiVersion: networking.higress.cn/v1
 kind: McpBridge
 metadata:
   name: default
@@ -66,7 +66,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    higress.io/destination: service-provider.DEFAULT-GROUP.d8ac64f3-xxxx-xxxx-xxxx-47a814ecf358.nacos
+    higress.cn/destination: service-provider.DEFAULT-GROUP.d8ac64f3-xxxx-xxxx-xxxx-47a814ecf358.nacos
   name: demo
   namespace: default
 spec:
@@ -75,13 +75,13 @@ spec:
       paths:
       - backend:
           resource:
-            apiGroup: networking.higress.io
+            apiGroup: networking.higress.cn
             kind: McpBridge
             name: default
         path: /
         pathType: Prefix
 ```
-和常见的 Ingress 在 backend 中定义 service 不同，这里基于 Ingress 的 resource backend 将上面定义服务来源的 McpBridge 进行关联。并通过注解`higress.io/destination`指定路由最终要转发到的目标服务。对于 Nacos 来源的服务，这里的目标服务格式为：“服务名称.服务分组.命名空间ID.nacos”，注意这里需要遵循 DNS 域名格式，因此服务分组中的下划线'_'被转换成了横杠'-'。
+和常见的 Ingress 在 backend 中定义 service 不同，这里基于 Ingress 的 resource backend 将上面定义服务来源的 McpBridge 进行关联。并通过注解`higress.cn/destination`指定路由最终要转发到的目标服务。对于 Nacos 来源的服务，这里的目标服务格式为：“服务名称.服务分组.命名空间ID.nacos”，注意这里需要遵循 DNS 域名格式，因此服务分组中的下划线'_'被转换成了横杠'-'。
 ### 丰富的微服务网关能力
 Higress 在微服务发现的基础上，提供了多种实用的微服务网关能力，这里以“灰度发布”和“自定义扩展”进行举例，更多能力可以点击原文参考 Higress 官网文档进行了解。
 #### 灰度发布
@@ -91,7 +91,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    higress.io/destination: service-provider.DEFAULT-GROUP.98ac6df3-xxxx-xxxx-xxxx-ab98115dfde4.nacos
+    higress.cn/destination: service-provider.DEFAULT-GROUP.98ac6df3-xxxx-xxxx-xxxx-ab98115dfde4.nacos
     nginx.ingress.kubernetes.io/canary: 'true'
     nginx.ingress.kubernetes.io/canary-by-header: x-user-id
     nginx.ingress.kubernetes.io/canary-by-header-value: '100'
@@ -103,7 +103,7 @@ spec:
       paths:
       - backend:
           resource:
-            apiGroup: networking.higress.io
+            apiGroup: networking.higress.cn
             kind: McpBridge
             name: default
         path: /
@@ -147,7 +147,7 @@ Higress 提出了将安全、流量、微服务网关三合一的概念，首先
 通过 Higress 将网关合并作为向 DevSecOps 演进的抓手，是一个明智的选择。
 ## 参与 Higress 社区
 Higress 开源贡献小组正在火热招募贡献者。如果您有时间，有热情，有意愿，欢迎联系社区加入开源贡献小组，一起共同完善 Higress，一起主导下一代云原生网关的设计和实现。
-社区官网（点击“阅读原文”跳转）: [https://higress.io](https://higress.io)
+社区官网（点击“阅读原文”跳转）: [https://higress.cn](https://higress.cn)
 社区开发者群：
 ![image.png](https://img.alicdn.com/imgextra/i1/O1CN01Zc7yGt1p0zYq3OCwj_!!6000000005299-2-tps-979-1280.png)
 社区交流群：

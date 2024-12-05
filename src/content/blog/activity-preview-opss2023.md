@@ -75,6 +75,6 @@ Nacos 官网：[http://nacos.io](http://nacos.io)
 
 - 对于**微服务分布式事务**有兴趣的同学，可以尝试填报[Seata](https://summer-ospp.ac.cn/org/orgdetail/064c15df-705c-483a-8fc8-02831370db14?lang=zh) 开源之夏；
 - 对于**微服务框架和RPC框架**有兴趣的同学，可以尝试填报[Spring Cloud Alibaba](https://summer-ospp.ac.cn/org/orgdetail/41d68399-ed48-4d6d-9d4d-3ff4128dc132?lang=zh) 和 [Dubbo](https://summer-ospp.ac.cn/org/orgdetail/a7f6e2ad-4acc-47f8-9471-4e54b9a166a6?lang=zh) 开源之夏；
-- 对于**云原生网关**有兴趣的同学，可以尝试填报[Higress](https://higress.io/zh-cn/blog/ospp-2023) 开源之夏；
+- 对于**云原生网关**有兴趣的同学，可以尝试填报[Higress](https://higress.cn/zh-cn/blog/ospp-2023) 开源之夏；
 - 对于**分布式高可用防护**有兴趣的同学，可以尝试填报[Sentinel](https://summer-ospp.ac.cn/org/orgdetail/5e879522-bd90-4a8b-bf8b-b11aea48626b?lang=zh) 开源之夏；
 - 对于**微服务治理**有兴趣的同学，可以尝试填报[OpenSergo](https://summer-ospp.ac.cn/org/orgdetail/aaff4eec-11b1-4375-997d-5eea8f51762b?lang=zh) 开源之夏。
